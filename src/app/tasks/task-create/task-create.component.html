@@ -1,0 +1,35 @@
+<mat-card>
+  <form (submit)="onAddTask(taskForm)" #taskForm="ngForm">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="title"
+        ngModel
+        #title="ngModel"
+        placeholder="Task Title"
+        required
+        minlength="3"
+      />
+      <mat-error *ngIf="title.invalid">Please enter a task title</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea
+        matInput
+        name="content"
+        rows="3"
+        ngModel
+        #content="ngModel"
+        placeholder="Task Content"
+        required
+        minlength="3"
+      ></textarea>
+      <mat-error *ngIf="content.invalid">Please ennter a task content</mat-error>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+    >Save Task</button>
+  </form>
+</mat-card>
