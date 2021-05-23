@@ -1,0 +1,35 @@
+<p>
+  task works!
+</p>
+
+<h3>Please provide task details</h3>
+<form (ngSubmit)="onSubmit()"> <!--[formGroup]="taskdetails"-->
+  <div>
+    <label for="username">
+      Username
+    </label>
+    <input id="username" type="text" formControlName="username" />
+  </div>
+
+  <div>
+    <label for="firstname">
+      First Name
+    </label>
+    <input id="firstname" type="text" formControlName="firstname" />
+  </div>
+
+  <div>
+    <label for="lastname">
+      Last Name
+    </label>
+    <input id="lastname" type="text" formControlName="lastname" />
+  </div>
+
+  <div>
+    <label for="date">
+      Date of birth
+    </label>
+    <input id="picker" type="date" formControlName="taskdate" />
+  </div>
+  <button class="button" type="submit" (click)="task()">Submit</button>
+</form>

@@ -1,0 +1,54 @@
+/* Add application styles & imports to this file! */
+header {
+  width: 100%;
+  margin-bottom: 5rem;
+  height: 30%;
+
+  border-style: dotted;
+  color: black;
+  border-width: 1px;
+}
+.navigation {
+  float: left;
+  width: 50%;
+
+  border-style: dotted;
+  color: black;
+  border-width: 1px;
+}
+
+.navigation2 {
+  float: right;
+  width: 40%;
+  margin-top: 0rem;
+
+  border-style: dotted;
+  color: black;
+  border-width: 1px;
+}
+
+ul li {
+  list-style: none;
+  display: inline;
+}
+
+nav a {
+  text-decoration: none;
+  margin-right: 9px;
+}
+
+.indexBody {
+  width: 100%;
+
+  border-style: dotted;
+  color: black;
+  border-width: 1px;
+}
+
+.formSection{
+  
+
+  border-style: dotted;
+  color: black;
+  border-width: 1px;
+}

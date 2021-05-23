@@ -1,0 +1,51 @@
+<p>
+  log-in works!
+</p>
+
+<div>
+  <h3>Please provide log in details</h3>
+  <form [formgroup]="logindetails" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="username">
+        Username
+      </label>
+      <input id="username" type="text" formControlName="username" />
+    </div>
+
+    <div>
+      <label for="firstname">
+        First Name
+      </label>
+      <input id="firstname" type="text" formControlName="firstname" />
+    </div>
+
+    <div>
+      <label for="lastname">
+        Last Name
+      </label>
+      <input id="lastname" type="text" formControlName="lastname" />
+    </div>
+
+    <div>
+      <label for="date">
+        Date of birth
+      </label>
+      <input id="picker" type="date" formControlName="date" />
+    </div>
+
+    <div>
+      <label for="email">
+        Email Address
+      </label>
+      <input id="email" type="text" formControlName="email" />
+    </div>
+
+    <div>
+      <label for="password">
+        Password
+      </label>
+      <input id="password" type="text" formControlName="password" />
+    </div>
+    <button class="button" type="submit" (click)="login()">Sign In</button>
+  </form>
+</div>
