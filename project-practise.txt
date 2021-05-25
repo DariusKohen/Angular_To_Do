@@ -715,17 +715,17 @@ Running your application locally
 
 -Download the source code from your stackblitz project by clicking the Download Project icon in the left menu, across from the Project, to download your files.
 
--Create a new Angular CLI workspaces using the ng new command, where my-project0name is what you would like to call your project
+-Create a new Angular CLI workspaces using the ng new command, where my-project-name is what you would like to call your project
 
 ng new my-project-name
 
--In your newly CLI-generated application, replace the /src folder with the.src folder from your Stackblitz download.
+-In your newly CLI-generated application, replace the /src folder with the /src folder from your Stackblitz download.
 
 -Use the following CLI command to run your application locally
 
 ng serve
 
--To see your application in the browser, go to http://localhost:4200/. If the default port 4200 is not available, you can soecify another port with the port flag as in the following example.
+-To see your application in the browser, go to http://localhost:4200/. If the default port 4200 is not available, you can specify another port with the port flag as in the following example.
 
 ng serve --port 4201
 
