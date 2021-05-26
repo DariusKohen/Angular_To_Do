@@ -1,0 +1,18 @@
+<h1 class="title">Lists</h1>
+<mat-selection-list
+  #colors
+  [multiple]="false"
+  class="lists-list"
+>
+  <mat-list-option
+    *ngFor="let list of listElements"
+    [routerLink]="['/lists', list._id]"
+  >
+    {{ list.title }}
+  </mat-list-option>
+</mat-selection-list>
+<button
+  mat-flat-button
+  class="add-list-button"
+  routerLink="/new-list"
+>Add a list</button>

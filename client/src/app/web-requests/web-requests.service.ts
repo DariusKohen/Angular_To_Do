@@ -7,7 +7,8 @@ export class WebRequestsService {
   readonly ROOT_URL;
 
   constructor(http: HttpClient) {
-    this.ROOT_URL = 'http://localhost:300';
+    this.http = http;
+    this.ROOT_URL = 'http://localhost:3000';
   }
 
   get(url: string) {

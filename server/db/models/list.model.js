@@ -9,7 +9,8 @@ const ListSchema = new mongoose.Schema({
     },
     _userId: {
         type: mongoose.Types.ObjectId,
-        required: true
+        // required: true
+        required: false
     }
 })
 

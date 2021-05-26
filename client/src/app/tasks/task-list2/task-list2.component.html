@@ -1,0 +1,16 @@
+<h1 class="title">Tasks</h1>
+<mat-selection-list #colorsShade style="flex: 1 1 auto;">
+  <!-- <mat-list-option style="text-decoration: line-through;">Lighter</mat-list-option> -->
+  <mat-list-option
+    *ngFor="let task of taskElements"
+    (click)="onTaskClick(task)"
+    [ngClass]="{ 'done': task.done}"
+    [selected]="task.done"
+  >{{ task.title }}</mat-list-option>
+</mat-selection-list>
+<button
+  mat-flat-button
+  class="add-list-button"
+  routerLink="./new-task"
+  style="align-self: flex-end"
+>Add a task</button>

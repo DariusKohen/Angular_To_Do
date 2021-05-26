@@ -1,0 +1,32 @@
+<main>
+  <mat-card>
+    <h1 class="title">Create a new task</h1>
+    <form (submit)="createTask(taskForm)" #taskForm="ngForm">
+      <mat-form-field>
+        <input
+          matInput
+          type="text"
+          name="title"
+          ngModel
+          #title="ngModel"
+          placeholder="Task Title"
+          required
+          minlength="2"
+        />
+        <mat-error *ngIf="title.invalid">Please enter a task title</mat-error>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        style="margin-left: 15px;"
+      >Save task</button>
+    </form>
+    <button
+      mat-flat-button
+      class="add-list-button"
+      routerLink="/"
+      style="margin-top: 15px;"
+    >Back</button>
+  </mat-card>
+</main>

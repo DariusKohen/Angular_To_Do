@@ -1,0 +1,19 @@
+<!-- <app-header></app-header> -->
+<!-- <main> -->
+  <!-- <app-test-ui></app-test-ui> -->
+  <!-- <app-task-create></app-task-create> -->
+  <!-- <app-task-list></app-task-list> -->
+<!-- </main> -->
+
+<main>
+  <div class="tasks-manager-container">
+    <app-lists-list
+      class="sidebar"
+      [listElements]="lists"
+    ></app-lists-list>
+    <app-task-list2
+      class="tasks-list-container"
+      [taskElements]="tasks"
+    ></app-task-list2>
+  </div>
+</main>

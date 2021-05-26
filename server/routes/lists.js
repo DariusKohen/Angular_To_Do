@@ -1,6 +1,8 @@
 const express = require('express')
 
-const { List, Task } = require('../db/models')
+const { List, Task, User } = require('../db/models')
+
+const jwt = require('jsonwebtoken');
 
 const router = express.Router()
 
@@ -22,10 +24,11 @@ let authenticate = (req, res, next) => {
  * GET /lists
  * Purpose: Get all lists
  */
-router.get('/', authenticate, (req, res) => {
+// router.get('/', authenticate, (req, res) => {
+router.get('/', (req, res) => {
     // Return array, depends on the user
     List.find({
-        _userId: req.user_id
+        // _userId: req.user_id
     }).then((lists) => {
         res.send(lists)
     }).catch((e) => {
@@ -37,10 +40,11 @@ router.get('/', authenticate, (req, res) => {
  * POST /lists
  * Purpose: Create a list
  */
-router.post('/', authenticate, (req, res) => {
+// router.post('/', authenticate, (req, res) => {
+router.post('/', (req, res) => {
     let newList = new List({
         title: req.body.title,
-        _userId: req.user_id
+        // _userId: req.user_id
     })
     newList.save().then((listDoc) => {
         // Return the list document
@@ -84,7 +88,8 @@ router.delete('/:id', authenticate, (req, res) => {
  * GET /lists/:listId/tasks
  * Purpose: Get all tasks in a specific list
  */
-router.get('/:listId/tasks', authenticate, (req, res) => {
+// router.get('/:listId/tasks', authenticate, (req, res) => {
+router.get('/:listId/tasks', (req, res) => {
     Task.find({
         _listId: req.params.listId
     }).then((tasks) => {
@@ -97,10 +102,11 @@ router.get('/:listId/tasks', authenticate, (req, res) => {
  * POST /lists/:listId/tasks
  * Purpose: Create a new task in a specific list
  */
-router.post('/:listId/tasks', authenticate, (req, res) => {
+// router.post('/:listId/tasks', authenticate, (req, res) => {
+router.post('/:listId/tasks', (req, res) => {
     List.findOne({
         _id: req.params.listId,
-        _userId: req.user_id
+        // _userId: req.user_id
     }).then((list) => {
         if (list) {
             return true
@@ -125,10 +131,11 @@ router.post('/:listId/tasks', authenticate, (req, res) => {
  * PATCH /lists/:listId/tasks/:taskId
  * Purpose: Update an existing task
  */
-router.patch('/:listId/tasks/:taskId', authenticate, (req, res) => {
+// router.patch('/:listId/tasks/:taskId', authenticate, (req, res) => {
+router.patch('/:listId/tasks/:taskId', (req, res) => {
     List.findOne({
         _id: req.params.listId,
-        _userId: req.user_id
+        // _userId: req.user_id
     }).then((list) => {
         if (list) {
             return true

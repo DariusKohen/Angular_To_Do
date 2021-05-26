@@ -1,0 +1,45 @@
+.tasks-manager-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  max-height: 680px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 42px;
+  overflow-x: auto;
+  background: white;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.tasks-list-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 42px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: #e9e9e9;
+}
+
+.title {
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #6ceaf5;
+  text-shadow: 3px 3px 5px #bffaff;
+}
+
+/* .lists-list {
+  padding-bottom: 10px;
+}
+
+.add-list-button {
+  background-color: #6ceaf5;
+  color: white;
+} */
