@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken")
 const crypto = require("crypto")
 const bcrypt = require("bcryptjs")
 
-const jwtSecret = "51778657246321226641fsdklafjasdkljfsklfjd7148924065"
+const jwtSecret = "kwapk3zrswa262hbs4merzwtg39fhfk6v24u4yyssxz9whrxkh6"
 
 const UserSchema = new mongoose.Schema({
   email: {
